@@ -1,0 +1,99 @@
+2025/06/09 02:08:28 使用现有目录: 03614，已有文件夹数量: 1/5
+2025/06/09 02:08:28 初始化切片目录为 03614，已有文件夹数量 1
+2025/06/09 02:08:28 共找到 12 个待处理案卷
+2025/06/09 02:09:18 所有案卷处理完成
+2025/06/09 02:20:26 使用现有目录: 03613，已有文件夹数量: 2/5
+2025/06/09 02:20:26 初始化切片目录为 03613，已有文件夹数量 2
+2025/06/09 02:20:26 共找到 14 个待处理案卷
+2025/06/09 02:22:34 所有案卷处理完成
+2025/06/09 03:16:26 使用现有目录: 03613，已有文件夹数量: 2/5
+2025/06/09 03:16:26 初始化切片目录为 03613，已有文件夹数量 2
+2025/06/09 03:16:26 共找到 14 个待处理案卷
+2025/06/09 03:19:27 使用现有目录: 03616，已有文件夹数量: 1/5
+2025/06/09 03:19:27 初始化切片目录为 03616，已有文件夹数量 1
+2025/06/09 03:19:27 共找到 11 个待处理案卷
+2025/06/09 03:19:27 案卷 08123d10-1215-4cbb-a251-39fbdd894366 处理失败: 合成外部 PDF 失败: open J:\imagess\001\ucamisweb\fileImages\01625\08123d10-1215-4cbb-a251-39fbdd894366: The system cannot find the file specified.
+2025/06/09 03:21:05 所有案卷处理完成
+2025/06/09 03:29:48 使用现有目录: 03613，已有文件夹数量: 2/5
+2025/06/09 03:29:48 初始化切片目录为 03613，已有文件夹数量 2
+2025/06/09 03:29:48 共找到 14 个待处理案卷
+2025/06/09 03:31:53 所有案卷处理完成
+2025/06/09 03:48:41 使用现有目录: 03613，已有文件夹数量: 2/5
+2025/06/09 03:48:41 初始化切片目录为 03613，已有文件夹数量 2
+2025/06/09 03:48:41 共找到 14 个待处理案卷
+2025/06/09 03:51:57 使用现有目录: 03613，已有文件夹数量: 2/5
+2025/06/09 03:51:57 初始化切片目录为 03613，已有文件夹数量 2
+2025/06/09 03:51:57 共找到 0 个待处理案卷
+2025/06/09 03:51:57 所有案卷处理完成
+2025/06/09 03:55:27 使用现有目录: 03613，已有文件夹数量: 2/5
+2025/06/09 03:55:27 初始化切片目录为 03613，已有文件夹数量 2
+2025/06/09 03:55:27 共找到 0 个待处理案卷
+2025/06/09 03:55:27 所有案卷处理完成
+2025/06/09 03:55:51 使用现有目录: 03613，已有文件夹数量: 2/5
+2025/06/09 03:55:51 初始化切片目录为 03613，已有文件夹数量 2
+2025/06/09 03:55:51 共找到 14 个待处理案卷
+2025/06/09 03:57:55 所有案卷处理完成
+2025/06/09 04:04:32 使用现有目录: 03613，已有文件夹数量: 2/5
+2025/06/09 04:04:32 初始化切片目录为 03613，已有文件夹数量 2
+2025/06/09 04:04:32 共找到 14 个待处理案卷
+2025/06/09 04:04:34 案卷 012aef31-40fb-4dab-bb9c-eff10aceb9cc 处理失败: JPG 处理失败: %vrename J:\imagess\001\ucamisweb\fileImages\01155\012aef31-40fb-4dab-bb9c-eff10aceb9cc J:\jpg_backup\imagess\001\ucamisweb\fileImages\01155\012aef31-40fb-4dab-bb9c-eff10aceb9cc: Cannot create a file when that file already exists.
+2025/06/09 04:04:34 案卷 17826673-2f38-49f0-9e48-b428b9ceb48a 处理失败: JPG 处理失败: %vrename J:\imagess\001\ucamisweb\fileImages\01165\17826673-2f38-49f0-9e48-b428b9ceb48a J:\jpg_backup\imagess\001\ucamisweb\fileImages\01165\17826673-2f38-49f0-9e48-b428b9ceb48a: Cannot create a file when that file already exists.
+2025/06/09 04:04:58 案卷 08123d10-1215-4cbb-a251-39fbdd894366 处理失败: JPG 处理失败: %vrename J:\imagess\001\ucamisweb\fileImages\01625\08123d10-1215-4cbb-a251-39fbdd894366 J:\jpg_backup\imagess\001\ucamisweb\fileImages\01625\08123d10-1215-4cbb-a251-39fbdd894366: Cannot create a file when that file already exists.
+2025/06/09 04:04:58 案卷 4dd6c819-46bc-473e-b402-861ac900ead2 处理失败: JPG 处理失败: %vrename J:\imagess\001\ucamisweb\fileImages\01164\4dd6c819-46bc-473e-b402-861ac900ead2 J:\jpg_backup\imagess\001\ucamisweb\fileImages\01164\4dd6c819-46bc-473e-b402-861ac900ead2: Cannot create a file when that file already exists.
+2025/06/09 04:04:59 案卷 6feadae5-b3e9-44a6-a631-5e4df55e5a92 处理失败: JPG 处理失败: %vrename J:\imagess\001\ucamisweb\fileImages\01164\6feadae5-b3e9-44a6-a631-5e4df55e5a92 J:\jpg_backup\imagess\001\ucamisweb\fileImages\01164\6feadae5-b3e9-44a6-a631-5e4df55e5a92: Cannot create a file when that file already exists.
+2025/06/09 04:05:01 案卷 70e7081c-c7b5-4310-9a73-d23a25e33132 处理失败: JPG 处理失败: %vrename J:\imagess\001\ucamisweb\fileImages\01164\70e7081c-c7b5-4310-9a73-d23a25e33132 J:\jpg_backup\imagess\001\ucamisweb\fileImages\01164\70e7081c-c7b5-4310-9a73-d23a25e33132: Cannot create a file when that file already exists.
+2025/06/09 04:05:31 案卷 60d23dfc-612f-4856-9474-3b70716fc830 处理失败: JPG 处理失败: %vrename J:\imagess\001\ucamisweb\fileImages\01164\60d23dfc-612f-4856-9474-3b70716fc830 J:\jpg_backup\imagess\001\ucamisweb\fileImages\01164\60d23dfc-612f-4856-9474-3b70716fc830: Cannot create a file when that file already exists.
+2025/06/09 04:09:31 使用现有目录: 03613，已有文件夹数量: 2/5
+2025/06/09 04:09:31 初始化切片目录为 03613，已有文件夹数量 2
+2025/06/09 04:09:31 共找到 14 个待处理案卷
+2025/06/09 04:11:39 所有案卷处理完成
+2025/06/10 10:17:38 使用现有目录: 03613，已有文件夹数量: 2/5
+2025/06/10 10:17:38 初始化切片目录为 03613，已有文件夹数量 2
+2025/06/10 10:17:38 查询待处理案卷失败: sql: Scan error on column index 2, name "process_type": converting NULL to int is unsupported
+2025/06/10 10:18:12 使用现有目录: 03613，已有文件夹数量: 2/5
+2025/06/10 10:18:12 初始化切片目录为 03613，已有文件夹数量 2
+2025/06/10 10:18:12 共找到 3 个待处理案卷
+2025/06/10 10:18:12 案卷 60d23dfc-612f-4856-9474-3b70716fc830 处理失败: 更新 file_input 状态失败: %vError 1065 (42000): Query was empty
+2025/06/10 10:18:14 所有案卷处理完成
+2025/06/10 10:42:02 使用现有目录: 03613，已有文件夹数量: 2/5
+2025/06/10 10:42:02 初始化切片目录为 03613，已有文件夹数量 2
+2025/06/10 10:42:02 共找到 3 个待处理案卷
+2025/06/10 10:42:04 所有案卷处理完成
+2025/06/10 14:55:09 使用现有目录: 03613，已有文件夹数量: 2/5
+2025/06/10 14:55:09 初始化切片目录为 03613，已有文件夹数量 2
+2025/06/10 14:55:09 共找到 2 个待处理案卷
+2025/06/10 14:55:11 所有案卷处理完成
+2025/06/12 15:39:35 使用现有目录: 03613，已有文件夹数量: 2/5
+2025/06/12 15:39:35 初始化切片目录为 03613，已有文件夹数量 2
+2025/06/12 15:39:35 共找到 1 个待处理案卷
+2025/06/12 15:39:36 所有案卷处理完成
+2025/06/12 15:46:06 使用现有目录: 03613，已有文件夹数量: 4/5
+2025/06/12 15:46:06 初始化切片目录为 03613，已有文件夹数量 4
+2025/06/12 15:46:06 共找到 13 个待处理案卷
+2025/06/12 15:47:38 所有案卷处理完成
+2025/06/26 13:49:41 使用现有目录: 03613，已有文件夹数量: 2/5
+2025/06/26 13:49:41 初始化切片目录为 03613，已有文件夹数量 2
+2025/06/26 13:49:41 共找到 14 个待处理案卷
+2025/06/26 13:51:20 所有案卷处理完成
+2025/06/26 14:25:04 使用现有目录: 03618，已有文件夹数量: 1/5
+2025/06/26 14:25:04 初始化切片目录为 03618，已有文件夹数量 1
+2025/06/26 14:25:04 共找到 14 个待处理案卷
+2025/06/26 14:25:04 案卷 012aef31-40fb-4dab-bb9c-eff10aceb9cc 处理失败: 合成外部 PDF 失败: open J:\imagess\001\ucamisweb\fileImages\01155\012aef31-40fb-4dab-bb9c-eff10aceb9cc: The system cannot find the file specified.
+2025/06/26 14:25:04 案卷 08123d10-1215-4cbb-a251-39fbdd894366 处理失败: 合成外部 PDF 失败: open J:\imagess\001\ucamisweb\fileImages\01625\08123d10-1215-4cbb-a251-39fbdd894366: The system cannot find the file specified.
+2025/06/26 14:25:04 案卷 17826673-2f38-49f0-9e48-b428b9ceb48a 处理失败: 合成外部 PDF 失败: open J:\imagess\001\ucamisweb\fileImages\01165\17826673-2f38-49f0-9e48-b428b9ceb48a: The system cannot find the file specified.
+2025/06/26 14:25:04 案卷 2e8585a4-dfbc-4213-8f71-1c9802d101b3 处理失败: 合成外部 PDF 失败: open J:\imagess\001\ucamisweb\fileImages\01164\2e8585a4-dfbc-4213-8f71-1c9802d101b3: The system cannot find the file specified.
+2025/06/26 14:25:04 案卷 12d81d6c-730e-402b-a687-335932a2b687 处理失败: 合成外部 PDF 失败: open J:\imagess\001\ucamisweb\fileImages\01164\12d81d6c-730e-402b-a687-335932a2b687: The system cannot find the file specified.
+2025/06/26 14:25:04 案卷 60d23dfc-612f-4856-9474-3b70716fc830 处理失败: 合成外部 PDF 失败: open J:\imagess\001\ucamisweb\fileImages\01164\60d23dfc-612f-4856-9474-3b70716fc830: The system cannot find the file specified.
+2025/06/26 14:25:04 案卷 6feadae5-b3e9-44a6-a631-5e4df55e5a92 处理失败: 合成外部 PDF 失败: open J:\imagess\001\ucamisweb\fileImages\01164\6feadae5-b3e9-44a6-a631-5e4df55e5a92: The system cannot find the file specified.
+2025/06/26 14:25:04 案卷 4dd6c819-46bc-473e-b402-861ac900ead2 处理失败: 合成外部 PDF 失败: open J:\imagess\001\ucamisweb\fileImages\01164\4dd6c819-46bc-473e-b402-861ac900ead2: The system cannot find the file specified.
+2025/06/26 14:25:04 案卷 77e77e74-f7db-431a-9591-02a1f5f19dd5 处理失败: 合成外部 PDF 失败: open J:\imagess\001\ucamisweb\fileImages\01164\77e77e74-f7db-431a-9591-02a1f5f19dd5: The system cannot find the file specified.
+2025/06/26 14:25:04 案卷 70e7081c-c7b5-4310-9a73-d23a25e33132 处理失败: 合成外部 PDF 失败: open J:\imagess\001\ucamisweb\fileImages\01164\70e7081c-c7b5-4310-9a73-d23a25e33132: The system cannot find the file specified.
+2025/06/26 14:25:04 案卷 b09773b1-505f-4b0f-a0fb-b2f8f9dd40a3 处理失败: 合成外部 PDF 失败: open J:\imagess\001\ucamisweb\fileImages\01625\b09773b1-505f-4b0f-a0fb-b2f8f9dd40a3: The system cannot find the file specified.
+2025/06/26 14:25:04 案卷 c1030da4-2144-41c5-b024-de341679ec2e 处理失败: 合成外部 PDF 失败: open J:\imagess\001\ucamisweb\fileImages\01164\c1030da4-2144-41c5-b024-de341679ec2e: The system cannot find the file specified.
+2025/06/26 14:25:04 案卷 c1b9c3f6-60a7-4bf9-aac2-dad1d4c4c642 处理失败: 合成外部 PDF 失败: open J:\imagess\001\ucamisweb\fileImages\01165\c1b9c3f6-60a7-4bf9-aac2-dad1d4c4c642: The system cannot find the file specified.
+2025/06/26 14:25:04 案卷 f4eee398-7fbe-4540-98af-3fd8fc1259ed 处理失败: 合成外部 PDF 失败: open J:\imagess\001\ucamisweb\fileImages\01625\f4eee398-7fbe-4540-98af-3fd8fc1259ed: The system cannot find the file specified.
+2025/06/26 14:25:04 所有案卷处理完成
+2025/06/26 14:30:53 使用现有目录: 03613，已有文件夹数量: 2/5
+2025/06/26 14:30:53 初始化切片目录为 03613，已有文件夹数量 2
+2025/06/26 14:30:53 共找到 14 个待处理案卷
+2025/06/26 14:32:44 所有案卷处理完成

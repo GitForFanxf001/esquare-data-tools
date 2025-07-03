@@ -1,0 +1,72 @@
+# 配置文件模板（config.yaml）
+
+# 数据库相关配置
+database:
+  # 使用 DSN 方式连接 MySQL，例如：
+  #  root:密码@tcp(IP:端口)/数据库名?charset=utf8mb4&parseTime=True&loc=Local
+  dsn: "root:1234567890@tcp(127.0.0.1:3306)/esquare-platform-qd-test?charset=utf8mb4&parseTime=True&loc=Local"
+
+  # 以下字段可根据实际表名修改（默认为本工具所需表）
+  table_input: "file_input"             # 待处理案卷记录表
+  table_eam_file: "eam_file"            # 案卷详情表
+  table_eam_record: "eam_record"        # 合成后 PDF 存储记录表
+  table_input_pdf: "input_pdf"          # 原始 PDF 索引表（用于查找需删除的记录）
+
+
+# 文件存储及 JPG/PDF 处理相关配置
+file:
+  # JPG 图片原始根目录（根据 file_slice_image 和 file_id 拼接子路径）
+  jpg_root: "J:/imagess/001/ucamisweb/fileImages"
+
+  # PDF 输出根目录（程序会在该目录下按分片生成子目录）
+  pdf_root: "J:/imagess/001/ucamisweb"
+
+  # JPG 备份或删除操作所用目录
+  # 实际执行时根据 file.move_jpg 字段决定“move”或“delete”或“keep”
+  jpg_backup_root: "J:/jpg_backup/imagess/001/ucamisweb/fileImages"
+
+  # 对应示例中 file.mode，可取值：move / delete / keep 数据库中的move_jpg表示是否处理该案卷下的JPG图片，这里是配置的处理方式
+  # move：将原始 JPG 目录移动到 backup_root
+  # delete：删除 JPG 目录
+  # keep：不做处理
+  jpg_action: "move"
+
+# 分片目录（slice）相关配置
+folders:
+  # 每个分片目录下最多允许存放多少个 record_id 文件夹，超过后递增分片号
+  max_per_dir: 5
+
+# 日志配置
+log:
+  # 日志文件输出路径（可为相对或绝对路径）；若留空则输出到控制台
+  path: "./logs/tool.log"
+  # 日志级别，可选：debug / info / error
+  level: "info"
+
+# 并发相关配置
+concurrency: 4
+
+# 示例解释：
+#
+# database.dsn            —— 数据库连接串
+# database.table_input    —— 对应 file_input 表名称
+# database.table_eam_file —— 对应 eam_file 表名称
+# database.table_eam_record —— 对应 eam_record 表名称
+# database.table_input_pdf   —— 对应 input_pdf 表名称（用于删除旧 PDF 的 record_sys_from=5 记录）
+# database.table_cleanup_log —— 对应 file_cleanup_log 表名称（执行结束后写入日志）
+#
+# file.jpg_root           —— 原始 JPG 存储根目录，后续会根据 “{file_slice_image}/{file_id}” 拼接完整路径
+# file.pdf_root           —— 合成后 PDF 存储根目录，程序会在其下按 “{sliceDir}/source/{record_id}” 生成子目录并保存 PDF
+# file.jpg_backup_root    —— 如果配置 jpg_action="move" 或 "delete"，则将对应 JPG 目录移动到该路径或彻底删除
+# file.jpg_action         —— JPG 处理方式，可选 move/delete/keep
+#
+# folders.max_per_dir     —— 每个分片目录（如 “…/03600”）下最多存放的 record_id 子目录数量，达到后自动递增分片号（“03601”）
+#
+# log.path                —— 日志文件输出路径
+# log.level               —— 日志级别（debug/info/error）
+# log.verbose_success     —— 是否将每个处理成功的记录写入单独日志文件 success_log
+# log.success_log         —— 成功日志记录文件（仅在 verbose_success = true 时生效）
+# log.error_log           —— 失败日志记录文件
+#
+# concurrency             —— 并发处理案卷的协程数量
+

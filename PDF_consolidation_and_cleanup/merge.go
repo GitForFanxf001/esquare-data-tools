@@ -8,7 +8,6 @@
 package main
 
 import (
-	"bufio"
 	"crypto/md5"
 	"database/sql"
 	"encoding/hex"
@@ -360,16 +359,16 @@ func mergeAndStorePDF(
 	pdf := gopdf.GoPdf{}
 	pdf.Start(gopdf.Config{PageSize: *gopdf.PageSizeA4})
 	var badJPGs []string
-	for _, name := range imgs {
+	/*for _, name := range imgs {
 		imgPath := filepath.Join(folderPath, name)
 		f, err := os.Open(imgPath)
 		if err != nil {
+			// 合成之前会检查图片是否能正常打开，所以合成的PDF中的图片应该都能正常打开。
 			log.Printf("打开图片失败: %s, %v", imgPath, err)
 			return err, len(imgs)
 		}
 		cfgImg, _, err := image.DecodeConfig(bufio.NewReader(f))
 		f.Close()
-
 		if err != nil {
 			// ??? 这个位置不能跳过打开失败的图片，如果遇到打开失败的图片是否继续需要核实？
 			log.Printf("解析图片尺寸失败: %s, %v", imgPath, err)
@@ -383,6 +382,40 @@ func mergeAndStorePDF(
 				log.Printf("写入 PDF 失败: %s, %v", imgPath, err)
 				return fmt.Errorf("写入 PDF 失败: %s, %v", imgPath, err), len(imgs)
 			}
+		}
+	}*/
+	for _, name := range imgs {
+		imgPath := filepath.Join(folderPath, name)
+
+		// 正确打开文件，避免 image.DecodeConfig 参数错误
+		file, err := os.Open(imgPath)
+		if err != nil {
+			log.Printf("打开图片失败: %s, %v", imgPath, err)
+			badJPGs = append(badJPGs, name)
+			continue
+		}
+		cfg, _, err := image.DecodeConfig(file)
+		file.Close()
+		if err != nil {
+			log.Printf("解析图片尺寸失败: %s, %v", imgPath, err)
+			badJPGs = append(badJPGs, name)
+			continue
+		}
+		w, h := float64(cfg.Width), float64(cfg.Height)
+
+		// 使用 ImageHolderByPath（无需注册）
+		holder, err := gopdf.ImageHolderByPath(imgPath)
+		if err != nil {
+			log.Printf("ImageHolder 加载失败: %s, %v", imgPath, err)
+			badJPGs = append(badJPGs, name)
+			continue
+		}
+
+		// 添加页面并插入图片
+		pdf.AddPageWithOption(gopdf.PageOption{PageSize: &gopdf.Rect{W: w, H: h}})
+		if err := pdf.ImageByHolder(holder, 0, 0, &gopdf.Rect{W: w, H: h}); err != nil {
+			log.Printf("写入 PDF 失败: %s, %v", imgPath, err)
+			return fmt.Errorf("写入 PDF 失败: %s, %v", imgPath, err), len(imgs)
 		}
 	}
 	pdfFile := filepath.Join(storagePath, recordID+".pdf")
@@ -708,46 +741,3 @@ func initStorageState() error {
 	log.Printf("初始化切片目录为 %s，已有文件夹数量 %d", globalState.currentSliceDir, globalState.folderCount)
 	return nil
 }
-
-// func initStorageState() error {
-// 	base := filepath.Join(cfg.File.PDFRoot)
-// 	entries, err := os.ReadDir(base)
-// 	if err != nil {
-// 		return err
-// 	}
-
-// 	var maxDir string
-// 	var maxCount int
-
-// 	for _, entry := range entries {
-// 		if !entry.IsDir() {
-// 			continue
-// 		}
-// 		name := entry.Name()
-// 		if _, err := strconv.Atoi(name); err != nil {
-// 			continue
-// 		}
-
-// 		subDir := filepath.Join(base, name, "source")
-// 		count := 0
-// 		if files, err := os.ReadDir(subDir); err == nil {
-// 			count = len(files)
-// 		}
-
-// 		if name > maxDir || maxDir == "" {
-// 			maxDir = name
-// 			maxCount = count
-// 		}
-// 	}
-
-// 	if maxDir == "" {
-// 		maxDir = "00001"
-// 		maxCount = 0
-// 	}
-
-// 	globalState.currentSliceDir = maxDir
-// 	globalState.folderCount = maxCount
-
-// 	log.Printf("当前切片目录初始化为 %s，已使用 %d 个文件夹\n", maxDir, maxCount)
-// 	return nil
-// }

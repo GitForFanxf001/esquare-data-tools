@@ -1,0 +1,31 @@
+CREATE TABLE `file_input` (
+  `file_id` varchar(36) COLLATE utf8_bin NOT NULL COMMENT '案卷ID',
+  `file_ajdh` varchar(50) COLLATE utf8_bin DEFAULT NULL COMMENT '案卷档号',
+  `file_record_count` int(11) DEFAULT NULL COMMENT '案卷下文件记录数',
+  `process_type` int(11) DEFAULT NULL COMMENT '处理类型（1：只清理PDF文件和文件记录，2：清理并合成PDF）',
+  `move_jpg` varchar(10) COLLATE utf8_bin DEFAULT NULL COMMENT '是否挪走JPG图片',
+  `outcome` varchar(511) COLLATE utf8_bin DEFAULT NULL COMMENT '处理结果（1. 待处理 2. 处理成功 3. 处理失败）',
+  `file_slice_image` varchar(10) COLLATE utf8_bin DEFAULT NULL COMMENT '图片所在分片目录',
+  `fail_reason` varchar(1023) COLLATE utf8_bin DEFAULT NULL,
+  `process_time` datetime DEFAULT NULL COMMENT '处理完成时间',
+  PRIMARY KEY (`file_id`),
+  KEY `idx_file_cleanup_log_ajdh` (`file_ajdh`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='案卷文件清理日志'
+
+
+CREATE TABLE `input_pdf` (
+  `record_id` varchar(36) COLLATE utf8_bin NOT NULL,
+  `record_wjdh` varchar(80) COLLATE utf8_bin DEFAULT NULL,
+  `record_file` varchar(36) COLLATE utf8_bin DEFAULT NULL,
+  `record_sproject` varchar(36) COLLATE utf8_bin DEFAULT NULL,
+  `record_slice_id` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `record_sys_from` int(11) DEFAULT NULL,
+  `record_lrr` varchar(20) COLLATE utf8_bin DEFAULT NULL,
+  `record_lrsj` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `record_fz` varchar(200) COLLATE utf8_bin DEFAULT NULL,
+  `record_path` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `record_full_path` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `file_name` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `producer` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `folder_path` varchar(255) COLLATE utf8_bin DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
